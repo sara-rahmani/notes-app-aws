@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css" />
+
+    <title>Document</title>
+</head>
+<body>
+
+  <main><h2>pokeNotes</h2>
+  <form action="/notes" method="post">
+<input type="text" name="title" placeholder="title"/>
+<textarea type="text" name="content" placeholder="content"></textarea>
+<input value="Add new note"  type="submit" />
+</form>
+<div class="list">
+    <h1>Notes</h1>
+<ul>
+  <% for (let i = 0; i < pokeNotes.length; i++ ) {%>
+  <li><%= pokeNotes[i].title %>
+  <a href="/notes/<%= pokeNotes[i].id %>/delete">Delete</a>
+  <a href="/notes/<%= pokeNotes[i].id %>">Details</a></li>
+
+  <% } %>
+</ul>
+</div>
+</main>
+</body> 
+</body>
+</html>
