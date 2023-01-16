@@ -68,7 +68,7 @@ console.log(id);
 })
 // After all other routes
 app.get('*', (req, res) => {
-  res.sendFile('index.ejs');
+  res.sendFile('views/index.ejs');
 });
 
 const port = process.env.PORT || 8081
