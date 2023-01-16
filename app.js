@@ -73,5 +73,5 @@ app.get('*', (req, res) => {
 
 const port = process.env.PORT || 8081
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at http://127.0.0.1:${port}`);
 });
