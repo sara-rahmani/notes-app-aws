@@ -70,5 +70,5 @@ console.log(id);
 
 const port = process.env.PORT || 8081
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${port}/notes`);
 });
