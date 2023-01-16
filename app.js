@@ -66,9 +66,12 @@ console.log(id);
     res.sendStatus(500)
   }
 })
-
+// After all other routes
+app.get('*', (req, res) => {
+  res.sendFile('index.ejs');
+});
 
 const port = process.env.PORT || 8081
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}/notes`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });
