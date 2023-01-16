@@ -10,8 +10,8 @@ const pool = mysql
     user: process.env.MYSQLUSER,
     password: process.env.MYSQLPASSWORD,
     database: process.env.MYSQLDATABASE,
-    port: process.env.MYSQLPORT || 3306,
-    socketPath: '/var/run/mysqld/mysqld.sock',
+    port: process.env.MYSQLPORT,
+    // socketPath: '/var/run/mysqld/mysqld.sock',
 
 })
   .promise()
